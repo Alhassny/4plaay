@@ -701,3 +701,87 @@ https://discord.gg/wKc5NAZ`
 });
 
 client.login(token);
+
+
+const Discord = require('discord.js');
+const nikolai = new Discord.Client();
+const adminprefix = "A";
+const developers = ['327259159349297162', '449313863494664214'];
+
+console.log("Nikolaiii");
+
+
+nikolai.on('message', message => {
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!developers.includes(message.author.id)) return;
+      
+  if (message.content.startsWith(adminprefix + 'setPlaying')) {
+    nikolai.user.setGame(argresult);
+      message.channel.send(`**Done   ${argresult}**`)
+  } else 
+  if (message.content.startsWith(adminprefix + 'setWatching')) {
+  nikolai.user.setActivity(argresult, {type:'WATCHING'});
+      message.channel.send(`**Done   ${argresult}**`)
+  } else 
+  if (message.content.startsWith(adminprefix + 'setListening')) {
+  nikolai.user.setActivity(argresult , {type:'LISTENING'});
+      message.channel.send(`**Done   ${argresult}**`)
+  } else 
+  if (message.content.startsWith(adminprefix + 'setStreaming')) {
+    nikolai.user.setGame(argresult, "https://www.twitch.tv/inikolaiii");
+      message.channel.send(`**Done**`)
+  }
+  if (message.content.startsWith(adminprefix + 'setName')) {
+  nikolai.user.setUsername(argresult).then
+      message.channel.send(`**Username** has been changed to: **${argresult}** `)
+} else
+if (message.content.startsWith(adminprefix + 'setAvatar')) {
+  nikolai.user.setAvatar(argresult);
+    message.channel.send(`**Avatar** has been changed to :**${argresult}** `);
+}
+});
+
+nikolai.login(process.env.ANWAR)  
+
+
+
+
+const Discord = require('discord.js');
+const alSayed = new Discord.Client();
+const alsayedprefix = "M";
+const developers = ['449313863494664214'];
+
+console.log("Mohmaed is working");
+
+
+nikolai.on('message', message => {
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!developers.includes(message.author.id)) return;
+      
+  if (message.content.startsWith(alsayedprefix + 'setPlaying')) {
+    alSayed.user.setGame(argresult);
+      message.channel.send(`**Done   ${argresult}**`)
+  } else 
+  if (message.content.startsWith(alsayedprefix + 'setWatching')) {
+  alSayed.user.setActivity(argresult, {type:'WATCHING'});
+      message.channel.send(`**Done   ${argresult}**`)
+  } else 
+  if (message.content.startsWith(alsayedprefix + 'setListening')) {
+  alSayed.user.setActivity(argresult , {type:'LISTENING'});
+      message.channel.send(`**Done   ${argresult}**`)
+  } else 
+  if (message.content.startsWith(alsayedprefix + 'setStreaming')) {
+    alSayed.user.setGame(argresult, "https://www.twitch.tv/inikolaiii");
+      message.channel.send(`**Done**`)
+  }
+  if (message.content.startsWith(alsayedprefix + 'setName')) {
+  alSayed.user.setUsername(argresult).then
+      message.channel.send(`**Username** has been changed to: **${argresult}** `)
+} else
+if (message.content.startsWith(alsayedprefix + 'setAvatar')) {
+  alSayed.user.setAvatar(argresult);
+    message.channel.send(`**Avatar** has been changed to :**${argresult}** `);
+}
+});
+
+alSayed.login(process.env.MOHAMED)  
