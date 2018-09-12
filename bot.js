@@ -703,7 +703,6 @@ https://discord.gg/wKc5NAZ`
 client.login(token);
 
 
-const Discord = require('discord.js');
 const nikolai = new Discord.Client();
 const adminprefix = "A";
 const developers = ['327259159349297162', '449313863494664214'];
@@ -746,7 +745,6 @@ nikolai.login(process.env.ANWAR)
 
 
 
-const Discord = require('discord.js');
 const alSayed = new Discord.Client();
 const alsayedprefix = "M";
 const developers = ['449313863494664214'];
