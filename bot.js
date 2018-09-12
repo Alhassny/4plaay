@@ -705,14 +705,14 @@ client.login(token);
 
 const nikolai = new Discord.Client();
 const adminprefix = "A";
-const developers = ['327259159349297162', '449313863494664214'];
+const Dev = ['327259159349297162', '449313863494664214'];
 
 console.log("Nikolaiii");
 
 
 nikolai.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!developers.includes(message.author.id)) return;
+      if (!Dev.includes(message.author.id)) return;
       
   if (message.content.startsWith(adminprefix + 'setPlaying')) {
     nikolai.user.setGame(argresult);
